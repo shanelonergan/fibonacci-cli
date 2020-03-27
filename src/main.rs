@@ -1,10 +1,11 @@
 use std::io;
+extern crate colour;
 
 fn main() {
-    println!("\n🐚  Welcome to the Fibonacci Generator! 🐚");
+    colour::cyan_ln!("\n🐚  Welcome to the Fibonacci Generator! 🐚");
 
     loop {
-        println!("\nPlease enter the number of the sequence you would like to see:");
+        colour::cyan_ln!("\nPlease enter the number of the sequence you would like to see:\n");
 
         let mut input = String::new();
 
@@ -14,7 +15,7 @@ fn main() {
         let input: u32 = match input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                println!("\nPlease enter a valid number");
+                colour::red_ln!("\nPlease enter a valid number");
                 continue;
             },
         };
