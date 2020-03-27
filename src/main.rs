@@ -1,10 +1,10 @@
 use std::io;
 
 fn main() {
-    println!("Welcome to the Fibonacci Generator!");
+    println!("\n🐚  Welcome to the Fibonacci Generator! 🐚");
 
     loop {
-        println!("Please enter the number of the sequence you would like to see:");
+        println!("\nPlease enter the number of the sequence you would like to see:");
 
         let mut input = String::new();
 
@@ -14,13 +14,13 @@ fn main() {
         let input: u32 = match input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                println!("Please enter a valid number");
+                println!("\nPlease enter a valid number");
                 continue;
             },
         };
 
         let output = fib(input);
-        println!("The {}th number of the Fibonacci sequence is {}", input, output);
+        println!("\nThe {}th number of the Fibonacci sequence is {}", input, output);
         break;
     };
 
