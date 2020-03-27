@@ -8,3 +8,4 @@ edition = "2018"
 
 [dependencies]
 colour = "0.5.0"
+console = "0.10.0"
