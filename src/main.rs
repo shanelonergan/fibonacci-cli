@@ -3,10 +3,10 @@ extern crate colour;
 use console::style;
 
 fn main() {
-    colour::cyan_ln!("\n\n🐚  Welcome to the Fibonacci Generator! 🐚");
+    println!("\n\n🐚  {} 🐚", style("Welcome to the Fibonacci Generator!").cyan());
 
     loop {
-        println!("\nPlease enter the number of the sequence you would like to see:\n");
+        println!("\nPlease enter the {} of the sequence you would like to see:\n", style("number").yellow().bold());
 
         let mut input = String::new();
 
@@ -22,7 +22,7 @@ fn main() {
         };
 
         let output = fib(input);
-        println!("\nThe {}{} number of the Fibonacci sequence is {}", style(input).cyan(), style("th").cyan(), style(output).yellow().bold());
+        println!("\nThe {}{} number of the Fibonacci sequence is {}\n", style(input).yellow().bold(), style("th").yellow().bold(), style(output).cyan().bold());
         break;
     };
 
