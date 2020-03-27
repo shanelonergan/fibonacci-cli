@@ -1,5 +1,4 @@
 use std::io;
-extern crate colour;
 use console::style;
 
 fn main() {
@@ -16,7 +15,7 @@ fn main() {
         let input: u32 = match input.trim().parse() {
             Ok(num) => num,
             Err(_) => {
-                colour::red_ln!("\nPlease enter a valid number");
+                println!("\n{}", style("Please enter a valid number").red());
                 continue;
             },
         };
